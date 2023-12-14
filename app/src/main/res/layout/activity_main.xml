@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal"></ImageView>
+
+    <ImageView
+        android:id="@+id/exit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="360dp"
+        android:background="@drawable/exit"></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Group 1"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="italic"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="13dp"></TextView>
+
+
+    <TextView
+        android:id="@+id/CalendarLbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call In The Rio"
+        android:textStyle="bold"
+        android:textColor="@color/teal"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:layout_marginTop="80dp"
+        ></TextView>
+
+
+    <CalendarView
+        android:id="@+id/calendar"
+        android:layout_below="@id/CalendarLbl"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-8dp"
+        android:layout_height="wrap_content"
+        ></CalendarView>
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:text="Upcoming Events"
+        android:textSize="20dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="-33dp"
+        android:backgroundTint="@color/white"
+        android:layout_above="@+id/scroll"
+        />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/calendar"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="26dp"
+        android:background="@color/white"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="342dp"
+            android:layout_marginStart="4.3dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/calendar">
+
+            <LinearLayout
+                android:id="@+id/scrollLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:elevation="0sp">
+                <TextView
+                    android:id="@+id/eventsLbl"
+                    android:layout_width="340dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="15dp"
+                    android:textSize="16dp"
+                    android:textStyle="italic"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addEvent"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="640dp"
+        android:foregroundTint="@color/teal"
+        android:backgroundTint="@color/teal"
+        android:text="+"
+        android:textSize="40dp"
+        android:layout_marginStart="315dp"></com.google.android.material.button.MaterialButton>
+
+
+</RelativeLayout>
